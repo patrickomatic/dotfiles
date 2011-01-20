@@ -1,0 +1,25 @@
+[core]
+	editor = vim
+
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+
+[diff]
+	renames = true
+
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	df = diff
+	lg = log
+	cp = cherry-pick
+	ps = push
+	pl = pull
+
+[user]
+	name = Patrick Carroll
+	email = patick@patrickomatic.com

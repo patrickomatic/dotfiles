@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/patrick/webs/webs-core/src/main/java/com/freewebz/premium/controllers'
+let g:netrw_dirhist_2='/home/patrick/webs/webs-api/grails-app'
+let g:netrw_dirhist_3='/home/patrick/webs/webs/webs-core/src/main/java/com/freewebz/site/model'
+let g:netrw_dirhist_4='/home/patrick/webs/webs/webs-core/src'
+let g:netrw_dirhist_5='/home/patrick/webs/webs/webs-core/src/main/java/com/freewebz/signup/model'
+let g:netrw_dirhist_6='/home/patrick/webs/webs/webs-war/src/main/webapp/WEB-INF/classes'

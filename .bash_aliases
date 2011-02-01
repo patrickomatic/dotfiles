@@ -13,6 +13,6 @@ alias la='ls -A'
 alias l='ls -CF'
 
 
-alias tstart=$CATALINA_HOME/bin/startup.sh
+alias tstart=$CATALINA_HOME/bin/catalina.sh jpda start
 alias tstop=$CATALINA_HOME/bin/shutdown.sh
 alias tailcat="tail -f $CATALINA_BASE/logs/catalina.out"

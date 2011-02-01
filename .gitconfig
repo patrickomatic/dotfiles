@@ -12,7 +12,7 @@
 [alias]
 	st = status
 	co = checkout
-	ci = commit
+	ci = commit -v
 	br = branch
 	df = diff
 	lg = log

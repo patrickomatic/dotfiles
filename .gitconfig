@@ -1,5 +1,6 @@
 [core]
 	editor = vim
+	excludesfile = /home/patrick/.gitignore_global
 
 [color]
 	diff = auto
@@ -15,11 +16,11 @@
 	ci = commit -v
 	br = branch
 	df = diff
-	lg = log
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit 
 	cp = cherry-pick
 	ps = push
-	pl = pull
+	pl = pull --rebase
 
 [user]
 	name = Patrick Carroll
-	email = patick@patrickomatic.com
+	email = patrick@patrickomatic.com

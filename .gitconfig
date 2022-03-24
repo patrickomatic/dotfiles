@@ -1,26 +1,29 @@
-[core]
-	editor = vim
-	excludesfile = /home/patrick/.gitignore_global
-
-[color]
-	diff = auto
-	branch = auto
-	status = auto
-
-[diff]
-	renames = true
-
 [alias]
-	st = status
-	co = checkout
-	ci = commit -v
-	br = branch
-	df = diff
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit 
-	cp = cherry-pick
-	ps = push
-	pl = pull --rebase
+  br = branch
+  brd = branch -d
+  brD = branch -D
+  ciaa = commit --verbose -a --amend
+  cia = commit --verbose -a
+  ci = commit --verbose
+  co = checkout
+  cob = checkout -b
+  com = checkout main
+  cp = cherry-pick
+  df = diff
+  dfm = diff main
+  dfu = diff --name-only --diff-filter=U --relative
+  l = log
+  lp = log -p
+  pl = pull --rebase
+  ps = push
+  psu = push -u origin
+  psf = push --force-with-lease
+  rba = rebase --abort
+  rbm = rebase main
+  rbc = rebase --continue
+  rhh = reset --hard HEAD
+  st = status
 
 [user]
-	name = Patrick Carroll
-	email = patrick@patrickomatic.com
+  name = Patrick
+  email = patrick@patrickomatic.com

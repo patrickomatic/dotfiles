@@ -1,4 +1,4 @@
-colorscheme prerun
+colorscheme gruvbox
 set guifont=Menlo-Regular:h16
 
 :nmap <F1> :echo<CR>

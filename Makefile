@@ -14,3 +14,6 @@ $${HOME}/.vimrc: .vimrc
 
 $${HOME}/.gvimrc: .gvimrc
 	cp $^ $@
+
+$${HOME}/.psqlrc: .psqlrc
+	cp $^ $@

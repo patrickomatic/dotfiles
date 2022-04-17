@@ -11,6 +11,12 @@ set nobackup
 set nowritebackup
 set termguicolors
 
+" folding
+set foldmethod=syntax
+set foldcolumn=1
+let javaScript_fold=1
+set foldlevelstart=99 " start with all folds opened
+
 set noeb vb t_vb=
 
 call plug#begin('~/.vim/plugged')

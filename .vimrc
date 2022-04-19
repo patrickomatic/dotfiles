@@ -30,6 +30,9 @@ call plug#end()
 
 let g:ale_fixers = {'typescript': ['prettier'], 'typescript.tsx': ['prettier'], 'typescriptreact': ['prettier']}
 let g:ale_fix_on_save = 1
+let g:ale_floating_preview = 1
+let g:ale_set_balloons=1
+let g:ale_cursor_detail=1
 
 let g:rg_command = '
   \ rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --color "always"

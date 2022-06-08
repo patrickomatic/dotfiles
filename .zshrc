@@ -1,7 +1,11 @@
 export EDITOR="mvim -f"
+export PSQL_EDITOR="vim"
 export GO_HOME=/usr/local/go
 export PATH="$JAVA_HOME/bin:$GO_HOME/bin:$HOME/bin:$PATH"
 alias gvim=mvim
+
+# otherwise vim colorschemes won't work in tmux
+alias tmux="TERM=screen-256color-bce tmux"
 
 [ -f ~/.zsh.env ] && source ~/.zsh.env
 

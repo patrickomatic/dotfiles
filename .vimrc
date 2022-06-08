@@ -44,3 +44,5 @@ command! -bang -nargs=* F call fzf#vim#grep(g:rg_command .shellescape(<q-args>),
 command! -bang -nargs=* FF call fzf#vim#grep(g:rg_command .shellescape(expand('<cword>')), 1, <bang>0)
 
 let g:terraform_fmt_on_save=1
+
+colorscheme everforest

@@ -1,3 +1,10 @@
+let mapleader = ","
+
+nnoremap <leader>a :tabp<CR>
+nnoremap <leader>f :tabn<CR>
+nnoremap <leader>d :tabnew<CR>:GFiles<CR>
+nnoremap <leader>s :GFiles<CR>
+
 set nocompatible
 set autoindent
 set backup

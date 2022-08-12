@@ -14,6 +14,7 @@
   dfu = diff --name-only --diff-filter=U --relative
   l = log
   lp = log -p
+  mm = merge main
   pl = pull --rebase
   ps = push
   psu = push -u origin

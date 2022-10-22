@@ -1,24 +1,30 @@
-all: $${HOME}/.config/git/ignore $${HOME}/.config/git/config $${HOME}/.zshrc $${HOME}/.vimrc $${HOME}/.gvimrc $${HOME}/.psqlrc $${HOME}/.tmux.conf
+all: fish git psql tmux vim
 
-$${HOME}/.config/git/ignore: .config/git/ignore
-	mkdir -p $${HOME}/.config/git
-	cp $^ $@
+.PHONY: fish
+fish: $${HOME}/.config/fish \
+	$${HOME}/.config/fish/config.fish \
+	$${HOME}/.config/fish/functions/fish_prompt.fish
+# TODO: run a command to make sure it's chsh fish?
 
-$${HOME}/.config/git/config: .config/git/config
-	mkdir -p $${HOME}/.config/git
-	cp $^ $@
+.PHONY: git
+git: $${HOME}/.config/git \
+	$${HOME}/.config/git/ignore \
+	$${HOME}/.config/git/config
 
-$${HOME}/.zshrc: .zshrc
-	cp $^ $@
+.PHONY: psql
+psql: $${HOME}/.psqlrc
 
-$${HOME}/.vimrc: .vimrc
-	cp $^ $@
+.PHONY: tmux
+tmux: $${HOME}/.tmux.conf
 
-$${HOME}/.gvimrc: .gvimrc
-	cp $^ $@
+.PHONY: vim
+vim: $${HOME}/.vimrc
 
-$${HOME}/.psqlrc: .psqlrc
-	cp $^ $@
+$${HOME}/.config/fish:
+	mkdir -p $@
 
-$${HOME}/.tmux.conf: .tmux.conf
+$${HOME}/.config/git:
+	mkdir -p $@
+
+$${HOME}/%: %
 	cp $^ $@

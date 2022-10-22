@@ -13,6 +13,8 @@ nnoremap <leader>r :Rg<SPACE>
 nnoremap <leader>n :ALENext<CR>
 " go to the previous error
 nnoremap <leader>p :ALEPrevious<CR>
+" run make
+nnoremap <leader>m :!make<CR>
 
 set nocompatible
 set autoindent

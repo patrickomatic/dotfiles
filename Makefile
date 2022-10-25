@@ -26,5 +26,5 @@ $${HOME}/.config/fish:
 $${HOME}/.config/git:
 	mkdir -p $@
 
-$${HOME}/%: %
+$${HOME}/.%: .%
 	cp $^ $@

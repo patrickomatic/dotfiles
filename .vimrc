@@ -29,7 +29,9 @@ set tabstop=2
 set shiftwidth=2
 set nobackup
 set nowritebackup
+
 set termguicolors
+set background=dark
 
 " folding (that works with typescript)
 set foldmethod=syntax
@@ -37,7 +39,7 @@ set foldcolumn=1
 let javaScript_fold=1
 set foldlevelstart=99 " start with all folds opened
 
-" XXX why did I do this
+" hush the terminal bell
 set noeb vb t_vb=
 
 call plug#begin('~/.vim/plugged')
@@ -51,7 +53,7 @@ Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 " Typescript config
-let g:ale_fixers = {'typescript': ['prettier'], 'typescript.tsx': ['prettier'], 'typescriptreact': ['prettier']}
+let g:ale_fixers = {'typescript': ['eslint'], 'typescript.tsx': ['eslint'], 'typescriptreact': ['eslint']}
 let g:ale_fix_on_save = 1
 let g:ale_floating_preview = 1
 let g:ale_set_balloons=1

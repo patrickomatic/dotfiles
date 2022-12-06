@@ -1,5 +1,9 @@
 all: fish git psql tmux vim
 
+.PHONY: alacritty
+alacritty: $${HOME}/.config/alacritty \
+	$${HOME}/.config/alacritty/alacritty.yml
+
 .PHONY: fish
 fish: $${HOME}/.config/fish \
 	$${HOME}/.config/fish/config.fish \
@@ -19,6 +23,9 @@ tmux: $${HOME}/.tmux.conf
 
 .PHONY: vim
 vim: $${HOME}/.vimrc
+
+$${HOME}/.config/alacritty:
+	mkdir -p $@
 
 $${HOME}/.config/fish:
 	mkdir -p $@

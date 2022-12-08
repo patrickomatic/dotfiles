@@ -14,7 +14,9 @@ nnoremap <leader>n :ALENext<CR>
 " go to the previous error
 nnoremap <leader>p :ALEPrevious<CR>
 " run make
-nnoremap <leader>m :!make<CR>
+nnoremap <leader>b :!make<CR>
+" insert lambda character
+nnoremap <leader>l aλ
 
 set nocompatible
 set autoindent

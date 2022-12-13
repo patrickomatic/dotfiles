@@ -1,4 +1,5 @@
-let mapleader = ","
+let mapleader = " "
+
 " tab left
 nnoremap <leader>a :tabp<CR>
 " tab right

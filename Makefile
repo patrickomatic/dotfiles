@@ -8,7 +8,6 @@ alacritty: $${HOME}/.config/alacritty \
 fish: $${HOME}/.config/fish \
 	$${HOME}/.config/fish/config.fish \
 	$${HOME}/.config/fish/functions/fish_prompt.fish
-# TODO: run a command to make sure it's chsh fish?
 
 .PHONY: git
 git: $${HOME}/.config/git \
@@ -22,7 +21,8 @@ psql: $${HOME}/.psqlrc
 tmux: $${HOME}/.tmux.conf
 
 .PHONY: vim
-vim: $${HOME}/.vimrc
+vim: $${HOME}/.vimrc \
+	$${HOME}/.config/nvim/init.vim
 
 $${HOME}/.config/alacritty:
 	mkdir -p $@
@@ -31,6 +31,9 @@ $${HOME}/.config/fish:
 	mkdir -p $@
 
 $${HOME}/.config/git:
+	mkdir -p $@
+
+$${HOME}/.config/nvim:
 	mkdir -p $@
 
 $${HOME}/.%: .%

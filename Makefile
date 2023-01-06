@@ -22,6 +22,7 @@ tmux: $${HOME}/.tmux.conf
 
 .PHONY: vim
 vim: $${HOME}/.vimrc \
+	$${HOME}/.config/nvim \
 	$${HOME}/.config/nvim/init.vim
 
 $${HOME}/.config/alacritty:

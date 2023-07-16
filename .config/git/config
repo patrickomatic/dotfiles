@@ -19,6 +19,7 @@
   ps = push
   psu = push -u origin
   psf = push --force-with-lease
+  pst = push origin --tags
   rba = rebase --abort
   rbm = rebase main
   rbc = rebase --continue

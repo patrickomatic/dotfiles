@@ -3,6 +3,4 @@ if status is-interactive
 
   fish_add_path ~/bin
   fish_add_path /Applications/Racket\ v8.7/bin
-
-  source ~/.asdf/asdf.fish
 end

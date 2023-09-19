@@ -1,9 +1,5 @@
 let mapleader = " "
 
-" tab left
-nnoremap <leader>a :tabp<CR>
-" tab right
-nnoremap <leader>f :tabn<CR>
 " open fzf in a new tab
 nnoremap <leader>d :tabnew<CR>:GFiles<CR>
 " open fzf in the current window
@@ -44,13 +40,15 @@ set foldlevelstart=99 " start with all folds opened
 set noeb vb t_vb=
 
 call plug#begin('~/.vim/plugged')
-Plug 'w0rp/ale'
-Plug 'ervandew/supertab'
-Plug 'leafgarland/typescript-vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
-Plug 'jremmen/vim-ripgrep'
+  Plug 'w0rp/ale'
+  Plug 'ervandew/supertab'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  Plug 'preservim/nerdtree'
+  Plug 'jremmen/vim-ripgrep'
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Typescript config
@@ -74,3 +72,5 @@ let g:rg_command = '
 let g:terraform_fmt_on_save=1
 
 colorscheme everforest
+
+let g:rustfmt_autosave = 1

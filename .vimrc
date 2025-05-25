@@ -43,7 +43,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'jremmen/vim-ripgrep'
   Plug 'rust-lang/rust.vim'
 call plug#end()

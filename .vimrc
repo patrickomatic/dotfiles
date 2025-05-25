@@ -40,23 +40,13 @@ set foldlevelstart=99 " start with all folds opened
 set noeb vb t_vb=
 
 call plug#begin('~/.vim/plugged')
-  Plug 'w0rp/ale'
-  Plug 'ervandew/supertab'
   Plug 'leafgarland/typescript-vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'preservim/nerdtree'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'jremmen/vim-ripgrep'
-  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'rust-lang/rust.vim'
 call plug#end()
-
-" Typescript config
-let g:ale_fixers = {'typescript': ['eslint'], 'typescript.tsx': ['eslint'], 'typescriptreact': ['eslint']}
-let g:ale_fix_on_save = 1
-let g:ale_floating_preview = 1
-let g:ale_set_balloons=1
-let g:ale_cursor_detail=1
 
 " ripgrep
 let g:rg_command = '
@@ -74,3 +64,6 @@ let g:terraform_fmt_on_save=1
 colorscheme everforest
 
 let g:rustfmt_autosave = 1
+
+autocmd FileType markdown setlocal textwidth=100
+autocmd FileType markdown setlocal colorcolumn=+1

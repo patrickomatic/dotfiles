@@ -1,15 +1,15 @@
 let mapleader = " "
 
-" open fzf in a new tab
-nnoremap <leader>d :tabnew<CR>:GFiles<CR>
-" open fzf in the current window
-nnoremap <leader>s :GFiles<CR>
+" tab left
+nnoremap <leader>a :tabp<CR>
+" tab right
+nnoremap <leader>f :tabn<CR>
 " ripgrep search
 nnoremap <leader>r :Rg<SPACE>
 " go to the next error
-nnoremap <leader>n :ALENext<CR>
+nnoremap <leader>n :CocNext<CR>
 " go to the previous error
-nnoremap <leader>p :ALEPrevious<CR>
+nnoremap <leader>p :CocPrev<CR>
 " run make
 nnoremap <leader>b :!make<CR>
 " insert lambda character
@@ -40,12 +40,9 @@ set foldlevelstart=99 " start with all folds opened
 set noeb vb t_vb=
 
 call plug#begin('~/.vim/plugged')
-  Plug 'leafgarland/typescript-vim'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'jremmen/vim-ripgrep'
-  Plug 'rust-lang/rust.vim'
+Plug 'preservim/nerdtree'
+Plug 'jremmen/vim-ripgrep'
+" Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
 
 " ripgrep
@@ -55,15 +52,8 @@ let g:rg_command = '
   \ -g "!{.git,node_modules,lib,coverage,ios,android}/*"
   \ -g "!**/{generated,__generated__,__fixtures__,node_modules,public}/**" '
 
-"command! -bang -nargs=* F call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
-"command! -bang -nargs=* FF call fzf#vim#grep(g:rg_command .shellescape(expand('<cword>')), 1, <bang>0)
 
 " Terraform
 let g:terraform_fmt_on_save=1
 
 colorscheme everforest
-
-let g:rustfmt_autosave = 1
-
-autocmd FileType markdown setlocal textwidth=100
-autocmd FileType markdown setlocal colorcolumn=+1

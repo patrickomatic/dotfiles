@@ -1,20 +1,28 @@
-.PHONY: all dry-run
-all:
-	@find . -maxdepth 1 -name '.[^.]*' ! -name '.git' ! -name '.config' | while read f; do \
-		ln -sfn "$(PWD)/$$f" "$(HOME)/$$f"; \
-	done
-	@mkdir -p "$(HOME)/.config"
-	@find .config -mindepth 1 -maxdepth 1 | while read d; do \
-		target="$(HOME)/$$d"; \
-		[ -d "$$target" ] && [ ! -L "$$target" ] && rm -rf "$$target"; \
-		ln -sfn "$(PWD)/$$d" "$$target"; \
-	done
+DOTFILES := $(shell pwd)
 
-dry-run:
-	@echo "Would create the following symlinks:"
-	@find . -maxdepth 1 -name '.[^.]*' ! -name '.git' ! -name '.config' | while read f; do \
-		echo "  $(HOME)/$$f -> $(PWD)/$$f"; \
-	done
-	@find .config -mindepth 1 -maxdepth 1 | while read d; do \
-		echo "  $(HOME)/$$d -> $(PWD)/$$d"; \
+LINKS := \
+	.bash_profile \
+	.bashrc \
+	.psqlrc \
+	.vimrc \
+	.zshrc \
+	.config/alacritty \
+	.config/gh \
+	.config/git \
+	.config/mise \
+	.config/nvim \
+	.config/tmux
+
+.PHONY: all
+all:
+	@mkdir -p ~/.config
+	@for link in $(LINKS); do \
+		target="$(DOTFILES)/$$link"; \
+		dest="$$HOME/$$link"; \
+		if [ -e "$$dest" ] && [ ! -L "$$dest" ]; then \
+			echo "backing up $$dest -> $$dest.bak"; \
+			mv "$$dest" "$$dest.bak"; \
+		fi; \
+		ln -sfn "$$target" "$$dest"; \
+		echo "$$dest -> $$target"; \
 	done

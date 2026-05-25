@@ -19,13 +19,13 @@
   ps = push
   psu = push -u origin
   psf = push --force-with-lease
-  pst = push origin --tags
   rba = rebase --abort
   rbm = rebase main
   rbc = rebase --continue
   rhh = reset --hard HEAD
   st = status
+  wr = worktree remove
 
 [user]
-  name = Patrick
-  email = patrick@patrickomatic.com
+  name = Patrick Carroll
+	email = patrick@rocketmoney.com

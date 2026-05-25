@@ -46,6 +46,8 @@ call plug#begin('~/.vim/plugged')
   " Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'jremmen/vim-ripgrep'
   Plug 'rust-lang/rust.vim'
+  Plug 'vim-scripts/c.vim'
+  Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 " ripgrep

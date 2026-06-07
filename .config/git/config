@@ -29,3 +29,5 @@
 [user]
   name = Patrick Carroll
 	email = patrick@rocketmoney.com
+[init]
+	defaultBranch = main

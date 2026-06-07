@@ -3,5 +3,6 @@
 *.swn
 *.swm
 *~
+.DS_Store
 
 **/.claude/settings.local.json
